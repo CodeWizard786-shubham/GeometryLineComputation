@@ -23,12 +23,13 @@ public class GeometryLine {
         int lx2=sc.nextInt();
         System.out.println("Enter value of y2:");
         int ly2=sc.nextInt();
-        double length1=Math.sqrt(Math.pow((x2-x1),2)+Math.pow((y2-y1),2));
-        double length2=Math.sqrt(Math.pow((lx2-lx1),2)+Math.pow((ly2-ly1),2));
-        if(length1>length2) {
+        Double length1=Math.sqrt(Math.pow((x2-x1),2)+Math.pow((y2-y1),2));
+        Double length2=Math.sqrt(Math.pow((lx2-lx1),2)+Math.pow((ly2-ly1),2));
+        int compareValue=length1.compareTo(length2);
+        if(compareValue>0) {
             System.out.println("The length of line 1 with cartesian points ("+x1+","+y1+") and ("+x2+","+y2+") is greater than line 2");
         }
-        else if(length1<length2){
+        else if(compareValue<0){
             System.out.println("The length of line 2 with cartesian points ("+lx1+","+ly1+") and ("+lx2+","+ly2+") is greater than line 1");
         }
         else {
