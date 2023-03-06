@@ -25,12 +25,14 @@ public class GeometryLine {
         int ly2=sc.nextInt();
         double length1=Math.sqrt(Math.pow((x2-x1),2)+Math.pow((y2-y1),2));
         double length2=Math.sqrt(Math.pow((lx2-lx1),2)+Math.pow((ly2-ly1),2));
-        if(length1==length2) {
-            System.out.println("The length of two lines is same");
+        if(length1>length2) {
+            System.out.println("The length of line 1 with cartesian points ("+x1+","+y1+") and ("+x2+","+y2+") is greater than line 2");
         }
-        else{
-            System.out.println("The length of two lines is not same");
-
+        else if(length1<length2){
+            System.out.println("The length of line 2 with cartesian points ("+lx1+","+ly1+") and ("+lx2+","+ly2+") is greater than line 1");
+        }
+        else {
+            System.out.println("The lengths of both lines are equal");
         }
 
     }
